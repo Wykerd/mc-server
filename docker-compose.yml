@@ -1,0 +1,14 @@
+version: '3'
+services:
+    minecraft:
+        build: .
+        volumes: 
+            - "./mc-data:/data"
+            - "./config:/mc/config"
+            - "./dist:/mc/spigot/dist"
+            - "./tools:/tools"
+        ports: 
+            - "25565:25565"
+        environment: 
+            OPS: 'Wykerd'
+    
